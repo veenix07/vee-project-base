@@ -19,7 +19,7 @@ public abstract class BaseService<T,PK extends Serializable> implements IService
 	@Override
 	public List<T> search(PK ID) {
 		// TODO Auto-generated method stub
-		return null;
+		return dao.search(ID);
 	}
 
 	@Override
@@ -35,15 +35,15 @@ public abstract class BaseService<T,PK extends Serializable> implements IService
 	}
 
 	@Override
+	@Transactional
 	public void update(T t) {
-		// TODO Auto-generated method stub
-		
+		dao.update(t);
 	}
 
 	@Override
+	@Transactional
 	public void delete(T t) {
-		// TODO Auto-generated method stub
-		
+	    dao.delete(t);
 	}
 
 

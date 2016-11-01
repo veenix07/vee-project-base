@@ -2,7 +2,10 @@ package com.vee.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -10,15 +13,19 @@ import javax.persistence.Table;
 public class Item {
 	private String itemCode;
 	private String itemName;
+	private String itemDesc;
+	private Integer qty;
+	private Category category;
 	
 	public Item() {
-		// TODO Auto-generated constructor stub
 	}
 	
-	public Item(String itemCode, String itemName) {
+	public Item(String itemCode, String itemName, String itemDesc, Integer qty) {
 		super();
 		this.itemCode = itemCode;
 		this.itemName = itemName;
+		this.itemDesc = itemDesc;
+		this.qty = qty;
 	}
 
 	@Id
@@ -36,4 +43,26 @@ public class Item {
 	public void setItemName(String itemName) {
 		this.itemName = itemName;
 	}
+	@Column(name="item_desc")
+    public String getItemDesc() {
+        return itemDesc;
+    }
+    public void setItemDesc(String itemDesc) {
+        this.itemDesc = itemDesc;
+    }
+    @Column(name="qty")
+    public Integer getQty() {
+        return qty;
+    }
+    public void setQty(Integer qty) {
+        this.qty = qty;
+    }
+    @ManyToOne(fetch=FetchType.LAZY)
+    @JoinColumn(name="category_code", nullable=false)
+    public Category getCategory() {
+        return category;
+    }
+    public void setCategory(Category category) {
+        this.category = category;
+    }
 }

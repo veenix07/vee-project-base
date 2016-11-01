@@ -39,13 +39,11 @@ public abstract class BaseDAO<T,PK extends Serializable> extends HibernateDaoSup
 
 	@Override
 	public void delete(T t) {
-		// TODO Auto-generated method stub
-		
+		getHibernateTemplate().delete(t);
 	}
 
 	@Override
 	public List<T> search(PK ID) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 

@@ -21,6 +21,12 @@
 		<property name="dao" ref="itemDAO"/>
 	</bean>
 	
+	<bean id="categoryDAO" class="com.vee.dao.impl.CategoryDAOImpl"/>
+	
+	<bean id="categoryServiceImpl" class="com.vee.services.impl.CategoryServiceImpl">
+		<property name="dao" ref="categoryDAO"/>
+	</bean>
+	
 	<context:component-scan base-package="com.vee"/>
 	<context:annotation-config />
 </beans>
