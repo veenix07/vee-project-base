@@ -20,14 +20,15 @@ public class Main {
 //		Item item = itemService.read("B023");
 //		System.out.println(item.getItemName());
 //		Category cat = new Category("C001", "Category 01");
+//		categoryService.create(cat);
 
 		Category cat = categoryService.read("C001");
 	    for(Item item : cat.getItemList()){
 	        System.out.println(item.getItemCode());
 	    }
-//		categoryService.create(cat);
+		
 //		Item item = new Item();
-//		item.setItemCode("B025");
+//		item.setItemCode("B023");
 //		item.setItemName("Banana023212");
 //		item.setItemDesc("Banana split 001");
 //		item.setQty(100);

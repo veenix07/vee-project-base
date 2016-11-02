@@ -7,11 +7,7 @@
         http://www.springframework.org/schema/context
 		http://www.springframework.org/schema/context/spring-context.xsd">
 
-	<import resource="../database/DataSource.xml" />
-	<import resource="../database/Hibernate.xml" />
-	<import resource="application-context-dao.xml" />
-	<import resource="application-context-services.xml" />
-
-	<context:component-scan base-package="com.vee"/>
-	<context:annotation-config />
+	<bean id="itemDAO" class="com.vee.dao.impl.ItemDAOImpl"/>
+	<bean id="categoryDAO" class="com.vee.dao.impl.CategoryDAOImpl"/>
+	
 </beans>
