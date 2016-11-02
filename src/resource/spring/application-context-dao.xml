@@ -9,5 +9,7 @@
 
 	<bean id="itemDAO" class="com.vee.dao.impl.ItemDAOImpl"/>
 	<bean id="categoryDAO" class="com.vee.dao.impl.CategoryDAOImpl"/>
+	<bean id="userDAO" class="com.vee.dao.impl.UserDAOImpl"/>
+	<bean id="roleDAO" class="com.vee.dao.impl.RoleDAOImpl"/>
 	
 </beans>

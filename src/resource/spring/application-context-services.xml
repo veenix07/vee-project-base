@@ -14,5 +14,13 @@
 	<bean id="categoryServiceImpl" class="com.vee.services.impl.CategoryServiceImpl">
 		<property name="dao" ref="categoryDAO"/>
 	</bean>
+
+	<bean id="userServiceImpl" class="com.vee.services.impl.UserServiceImpl">
+		<property name="dao" ref="userDAO"/>
+	</bean>
+	
+	<bean id="roleServiceImpl" class="com.vee.services.impl.RoleServiceImpl">
+		<property name="dao" ref="roleDAO"/>
+	</bean>
 	
 </beans>
